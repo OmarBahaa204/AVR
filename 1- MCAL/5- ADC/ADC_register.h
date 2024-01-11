@@ -21,25 +21,25 @@
 /******************************           *********************************/
 /**************************************************************************/
 
-#define ADMUX           *((volatile u8*)0x27)               //ADC Multiplixer Sellection Regisrer
-#define ADMUX_REFS1     7                                   //Refrence Seleection Bit1
-#define ADMUX_REFS0     6                                   //Refrence Seleection Bit0
-#define ADMUX_ADLAR     5                                   //ADC Left Adgusment result
-#define ADMUX_MUX4      4                                   //Analog channel & gain sellection Bit4
-#define ADMUX_MUX3      3                                   //Analog channel & gain sellection Bit3
-#define ADMUX_MUX2      2                                   //Analog channel & gain sellection Bit2
-#define ADMUX_MUX1      1                                   //Analog channel & gain sellection Bit1
-#define ADMUX_MUX0      0                                   //Analog channel & gain sellection Bit0
+#define ADMUX           *((volatile u8*)0x27)               //ADC Multiplexer Selection Register
+#define ADMUX_REFS1     7                                   //Reference Selection Bit1
+#define ADMUX_REFS0     6                                   //Reference Selection Bit0
+#define ADMUX_ADLAR     5                                   //ADC Left Adjustment result
+#define ADMUX_MUX4      4                                   //Analog channel & gain Selection Bit4
+#define ADMUX_MUX3      3                                   //Analog channel & gain Selection Bit3
+#define ADMUX_MUX2      2                                   //Analog channel & gain Selection Bit2
+#define ADMUX_MUX1      1                                   //Analog channel & gain Selection Bit1
+#define ADMUX_MUX0      0                                   //Analog channel & gain Selection Bit0
 
 #define ADCSRA          *((volatile u8*)0x26)               //ADC Control & Status register A
 #define ADCSRA_ADEN     7                                   //ADC Enable
-#define ADCSR_ADSC      6                                   //ADC Start Conversion
-#define ADCSR_ADATE     5                                   //ADC Auto Trigger Enable
-#define ADCSR_ADIF      4                                   //ADC Interrupt flag
-#define ADCSR_ADIE      3                                   //ADC Interrupt Enable
-#define ADCSR_ADPS2     2                                   //ADC Prescaller Sellection Bit2
-#define ADCSR_ADPS1     1                                   //ADC Prescaller Sellection Bit1
-#define ADCSR_ADPS0     0                                   //ADC Prescaller Sellection Bit0
+#define ADCSRA_ADSC      6                                   //ADC Start Conversion
+#define ADCSRA_ADATE     5                                   //ADC Auto Trigger Enable
+#define ADCSRA_ADIF      4                                   //ADC Interrupt flag
+#define ADCSRA_ADIE      3                                   //ADC Interrupt Enable
+#define ADCSRA_ADPS2     2                                   //ADC Prescaler Selection Bit2
+#define ADCSRA_ADPS1     1                                   //ADC Prescaler Selection Bit1
+#define ADCSRA_ADPS0     0                                   //ADC Prescaler Selection Bit0
 
 
 #define ADCH            *((volatile u8*)0x25)               //ADC Data Register High Byte

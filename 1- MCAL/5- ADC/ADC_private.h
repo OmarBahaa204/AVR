@@ -16,7 +16,18 @@
 #ifndef _ADC_PRIVATE_H
 #define _ADC_PRIVATE_H
 
+#define LEFT_ADJUST							0
+#define RIGHT_ADJUST						1
 
+#define ENABLE								0
+#define DISABLE								1
 
-
+#define FREE_RUNNING             			0
+#define ANALOG_COMPARATOR        			1
+#define EXTI_INT0                			2
+#define TIMER0_COMPARE_MATCH     			3
+#define TIMER0_OVERFLOW          			4
+#define TIMER0_COMPARE_MATCH_B   			5
+#define TIMER1_OVERFLOW          			6
+#define TIMER1_CAPTURE_EVENT				7
 #endif
