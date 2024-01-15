@@ -50,7 +50,7 @@
 											1- Reference voltage selection
 											2- Data Adjustment direction
 											3- Prescaler Bits
-											4- Auto trigger Enable
+											4- Auto trigger Enable/Disable
 											 4a-Select Auto trigger Source
 											5- Interrupt Enable/disable
 											6- Enable ADC peripheral			*/
@@ -66,7 +66,19 @@ void MADC_voidInit(void);
             7-ADC_CHANNEL_6
             8-ADC_CHANNEL_7
             */
-u8 MADC_u8GetSingleChannelReading(u8 Copy_u8Channel);
+u8 MADC_u8StartConversionSynch(u8 Copy_u8Channel , u16* Copy_pu16Reading);
+/**************************************************************************/
+/*Options : before calling this function first we must Enable GIE
+            1-ADC_CHANNEL_0
+            2-ADC_CHANNEL_1
+            3-ADC_CHANNEL_2
+            4-ADC_CHANNEL_3
+            5-ADC_CHANNEL_4
+            6-ADC_CHANNEL_5
+            7-ADC_CHANNEL_6
+            8-ADC_CHANNEL_7
+            */
+u8 MADC_u8StartConversionAsynch(u8 Copy_u8Channel , u16* Copy_pu16Reading , void (*Copy_pvNotificationFunc)(void));
 /**************************************************************************/
 /*Options :
  	 	 	1- DIVISION_BY_2
@@ -89,28 +101,8 @@ u8 MADC_u8SellectReferenceVolt(u8 Copy_u8Refference);
 void MADC_voidEnable(void);
 void MADC_voidDisable(void);
 /**************************************************************************/
-#endif
-/**************************Next version Functions***************************/
-/*
-void ADC_VidStartConverssion();
-//ADCSRA Bit 4 is ADC conversion flag =1 by end of conversion and reset by 1
-u8 ADC_U8PoolConverssion();
-u16 ADC_U8GetData();
-void ADC_VidConvIntEnable();
-void ADC_VidConvIntDisable();
-void ADC_VidFlagIntClr();
-static void (*PVidADC_CallBack)(void)=NULL;
-void ADC_VidSetCallBack(void (*Copy_PVidCallBack)(void));
-
-//ADC Converssion complelete
-void __vector_16(void )
-{
-
-	if (PVidADC_CallBack!=NULL)
-	{
-		PVidADC_CallBack();
-	}
-}
-*/
+void MADC_voidStartConverssion(void);
 /**************************************************************************/
+#endif
+
 

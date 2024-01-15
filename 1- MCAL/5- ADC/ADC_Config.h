@@ -30,6 +30,11 @@
 #define DATA_ADJUSTMENT			LEFT_ADJUST
 /**************************************************************************/
 /*Options :
+ 	 	 	1- RESOLUTION_8_BIT
+ 	 	 	2- RESOLUTION_10_BIT			*/
+#define ADC_DATA			RESOLUTION_8_BIT
+/**************************************************************************/
+/*Options :
  	 	 	1- DIVISION_BY_2
  	 	 	2- DIVISION_BY_4
  	 	 	3- DIVISION_BY_8
@@ -42,7 +47,7 @@
 /*Options :
  	 	 	1- ENABLE
  	 	 	2- DISABLE		*/
-#define AUTO_TRIGGER	DISABLE
+#define AUTO_TRIGGER			DISABLE
 /**************************************************************************/
 /*Options :
  	 	 	1- FREE_RUNNING
@@ -54,4 +59,6 @@
  	 	 	7- TIMER1_OVERFLOW
  	 	 	8- TIMER1_CAPTURE_EVENT			*/
 #define AUTO_TRIGGER_SOURCE		FREE_RUNNING
+/**************************************************************************/
+#define ADC_u32TIMEOUT			50000    //random number
 #endif
